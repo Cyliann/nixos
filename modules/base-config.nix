@@ -55,7 +55,10 @@
   };
 
   # Open ports in the firewall.
-  networking.firewall.allowedTCPPorts = [ 22 ];
+  networking.firewall.allowedTCPPorts = [
+    22
+    80
+  ];
   
   system.stateVersion = "24.05"; # Did you read the comment?
 }

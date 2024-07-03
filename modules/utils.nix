@@ -4,6 +4,7 @@
     neovim
     git
     wget
+    gcc
     ripgrep
     nh
     zip
