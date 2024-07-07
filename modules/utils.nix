@@ -4,12 +4,12 @@
     neovim
     git
     wget
+    gcc
     ripgrep
     nh
     zip
     unzip
     ntfs3g
     killall
-    efibootmgr
   ];
 }
