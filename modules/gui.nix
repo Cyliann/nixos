@@ -11,6 +11,22 @@
     wl-clipboard
     telegram-desktop
     modrinth-app
+    hypridle
+
+    # MPRIS
+    playerctl
+    mpdris2 # mpd
+    (mpv.override {scripts = with mpvScripts; [mpris];})
+    clematis # Discord rich presence
+  ];
+
+  nixpkgs.overlays = [ 
+    (final: prev: {
+      brave = prev.brave.override {
+        commandLineArgs =
+        "--enable-features=TouchpadOverscrollHistoryNavigation";
+      };
+    })
   ];
   
   programs = {

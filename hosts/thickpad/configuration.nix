@@ -33,6 +33,10 @@
     };
   };
 
+  environment.systemPackages = with pkgs; [
+    brightnessctl
+  ];
+
   home-manager = {
     # also pass inputs to home-manager modules
     extraSpecialArgs = { inherit inputs; };
@@ -42,4 +46,12 @@
 
   };
 
+  services.fprintd = {
+    enable = true;
+    # package = pkgs.fprintd-tod;
+    # tod = {
+    #   enable = true;
+    #   driver = pkgs.libfprint-2-tod1-vfs0090;
+    # };
+  };
 }
