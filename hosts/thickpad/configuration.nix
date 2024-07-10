@@ -35,6 +35,7 @@
 
   environment.systemPackages = with pkgs; [
     brightnessctl
+    bolt # thunderbolt management
   ];
 
   home-manager = {
@@ -46,12 +47,9 @@
 
   };
 
-  services.fprintd = {
-    enable = true;
-    # package = pkgs.fprintd-tod;
-    # tod = {
-    #   enable = true;
-    #   driver = pkgs.libfprint-2-tod1-vfs0090;
-    # };
-  };
+  # Make fingerprint work
+  services.open-fprintd.enable = true;
+  services.python-validity.enable = true;
+
+  security.pam.services.hyprlock.fprintAuth = true;
 }

@@ -9,7 +9,9 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    ags.url = "github:Aylur/ags";  
+    nixos-06cb-009a-fingerprint-sensor = {
+      url = "github:ahbnr/nixos-06cb-009a-fingerprint-sensor";
+    };
   };
 
   outputs = { self, nixpkgs, ... }@inputs: {
@@ -19,7 +21,8 @@
         specialArgs = {inherit system inputs;};
         modules = [
           ./hosts/thickpad/configuration.nix
-          # inputs.home-manager.nixosModules.default
+          inputs.nixos-06cb-009a-fingerprint-sensor.nixosModules.open-fprintd
+          inputs.nixos-06cb-009a-fingerprint-sensor.nixosModules.python-validity
         ];
       };
       server = nixpkgs.lib.nixosSystem rec {

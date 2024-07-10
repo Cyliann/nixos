@@ -11,5 +11,6 @@
     unzip
     ntfs3g
     killall
+    usbutils
   ];
 }

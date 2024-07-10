@@ -2,7 +2,7 @@
 {
   environment.systemPackages = with pkgs; [
     gcc
-    rustup
+    cargo
     bun
     ntfs3g
     killall
