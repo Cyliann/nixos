@@ -3,6 +3,7 @@
   environment.systemPackages = with pkgs; [
     neovim
     git
+    lazygit
     wget
     gcc
     ripgrep
