@@ -12,5 +12,6 @@
     ntfs3g
     killall
     usbutils
+    btop
   ];
 }
