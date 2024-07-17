@@ -11,7 +11,6 @@
     wl-clipboard
     telegram-desktop
     modrinth-app
-    hypridle
 
     # MPRIS
     playerctl

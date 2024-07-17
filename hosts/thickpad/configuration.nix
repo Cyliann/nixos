@@ -10,6 +10,7 @@
       ../../modules/programing.nix
       ../../modules/terminal.nix
       ../../modules/rice.nix
+      ../../modules/fingerprint.nix
     ];
     
   networking.hostName = "thickpad";
@@ -45,12 +46,5 @@
     users = {
       "cylian" = import ./home.nix;
     };
-
   };
-
-  # Make fingerprint work
-  services.open-fprintd.enable = true;
-  services.python-validity.enable = true;
-
-  security.pam.services.login.fprintAuth = true;
 }
