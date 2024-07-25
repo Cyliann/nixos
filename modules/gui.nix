@@ -11,6 +11,7 @@
     wl-clipboard
     telegram-desktop
     modrinth-app
+    anki-bin
 
     # MPRIS
     playerctl
@@ -38,6 +39,10 @@
     dconf.enable = true; # needed for wpgtk
   };
   
+  fonts.packages = with pkgs; [
+    noto-fonts-cjk-serif
+  ];
+
   xdg.portal = {
     enable = true;
     extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
@@ -48,9 +53,10 @@
     # Hint electron apps to use wayland
     NIXOS_OZONE_WL = 1;
 
-    # FIx Dolphin
+    # Fix Anki
     QT_QPA_PLATFORM = "wayland";
     QT_QPA_PLATFORMTHEME = "qt5ct";
+    ANKI_WAYLAND = 1;
   };
 
   services = {

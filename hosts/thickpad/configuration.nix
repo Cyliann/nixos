@@ -10,7 +10,7 @@
       ../../modules/programing.nix
       ../../modules/terminal.nix
       ../../modules/rice.nix
-      ../../modules/fingerprint.nix
+      # ../../modules/fingerprint.nix
     ];
     
   networking.hostName = "thickpad";
