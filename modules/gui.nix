@@ -12,6 +12,7 @@
     telegram-desktop
     modrinth-app
     anki-bin
+    libreoffice
 
     # MPRIS
     playerctl
