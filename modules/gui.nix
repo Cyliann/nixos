@@ -13,6 +13,7 @@
     modrinth-app
     anki-bin
     libreoffice
+    zathura
 
     # MPRIS
     playerctl
