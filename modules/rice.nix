@@ -5,13 +5,14 @@
     wpgtk
     rofi-wayland
     hyprpaper
+    hyprpanel
     swww
     sass
     fd
     brightnessctl
     wpgtk
     nwg-look
-    gnome.adwaita-icon-theme
+    adwaita-icon-theme
     matugen
     stow
   ];

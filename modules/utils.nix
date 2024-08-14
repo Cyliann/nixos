@@ -14,5 +14,6 @@
     killall
     usbutils
     btop
+    sshfs
   ];
 }

@@ -8,12 +8,15 @@
     brave
     armcord
     pcmanfm
+    gvfs # ftp support for pcmanfm
     wl-clipboard
     telegram-desktop
     modrinth-app
     anki-bin
     libreoffice
     zathura
+    pavucontrol
+    hyprshot
 
     # MPRIS
     playerctl
@@ -89,7 +92,7 @@
 
   hardware = {
     bluetooth.enable = true;
-    opengl.enable = true;
+    graphics.enable = true;
     nvidia.modesetting.enable = true;
   };
 }
