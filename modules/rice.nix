@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 {
   environment.systemPackages = with pkgs; [
     pywal
@@ -6,6 +6,7 @@
     rofi-wayland
     hyprpaper
     hyprpanel
+    hyprcursor
     swww
     sass
     fd
@@ -15,6 +16,7 @@
     adwaita-icon-theme
     matugen
     stow
+    inputs.rose-pine-hyprcursor.packages.${pkgs.system}.default
   ];
 
   fonts.packages = with pkgs; [
