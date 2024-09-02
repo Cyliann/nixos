@@ -6,9 +6,8 @@
     bun
     ntfs3g
     killall
-    (python312.withPackages (ps: with ps; [ # install python 3.12 and libraries
+    (python311.withPackages (ps: with ps; [ # install python 3.12 and libraries
       requests
-      jupyterthemes
     ]))
     poetry # python library management
     jupyter
