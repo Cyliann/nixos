@@ -4,14 +4,14 @@
     [
       ./hardware-configuration.nix
       inputs.home-manager.nixosModules.default
-      ../../modules/base-config.nix
-      ../../modules/gui.nix
-      ../../modules/utils.nix
-      ../../modules/programing.nix
-      ../../modules/terminal.nix
-      ../../modules/rice.nix
-      # ../../modules/fingerprint.nix
+      ../../modules/modules.nix
     ];
+
+  programming.enable = true;
+  gui.enable = true;
+  utils.enable = true;
+  terminal.enable = true;
+  rice.enable = true;
     
   networking.hostName = "thickpad";
 
