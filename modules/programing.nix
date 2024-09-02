@@ -8,6 +8,8 @@
     killall
     (python311.withPackages (ps: with ps; [ # install python 3.12 and libraries
       requests
+      numpy
+      pandas
     ]))
     poetry # python library management
     jupyter
