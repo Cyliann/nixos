@@ -22,6 +22,9 @@
       zathura
       pavucontrol
       hyprshot
+      mpd
+      ncmpcpp
+      whatsapp-for-linux
 
       # MPRIS
       playerctl

@@ -18,6 +18,7 @@
       ]))
       poetry # python library management
       jupyter
+      luajitPackages.luarocks
     ];
 
     fonts.packages = with pkgs; [

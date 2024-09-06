@@ -24,7 +24,7 @@
 	  };
   in {
     nixosConfigurations = {
-      thickpad = nixpkgs.lib.nixosSystem rec {
+      thickpad = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit system inputs pkgs;};
         modules = [
           ./hosts/thickpad/configuration.nix
@@ -32,7 +32,7 @@
             inputs.nixos-06cb-009a-fingerprint-sensor.nixosModules.python-validity
         ];
       };
-      server = nixpkgs.lib.nixosSystem rec {
+      server = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit system inputs;};
         modules = [
           ./hosts/server/configuration.nix
