@@ -22,9 +22,9 @@
       zathura
       pavucontrol
       hyprshot
-      mpd
-      ncmpcpp
       whatsapp-for-linux
+      mpd
+      (ncmpcpp.override { visualizerSupport = true; })
 
       # MPRIS
       playerctl
