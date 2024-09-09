@@ -12,6 +12,7 @@
       bat
       lf
       ranger
+      pistol
     ];
   };
 }

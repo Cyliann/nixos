@@ -20,6 +20,7 @@
       usbutils
       btop
       sshfs
+      file
     ];
   };
 }
