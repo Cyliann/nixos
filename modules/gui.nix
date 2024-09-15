@@ -1,87 +1,107 @@
-{ pkgs, ... }:
+{ pkgs, lib, config, ... }:
 {
-  environment.systemPackages = with pkgs; [
-    kitty
-    neovide
-    dunst
-    libnotify # dunst depends on this
-    brave
-    armcord
-    pcmanfm
-    wl-clipboard
-    telegram-desktop
-    modrinth-app
-
-    # MPRIS
-    playerctl
-    mpdris2 # mpd
-    (mpv.override {scripts = with mpvScripts; [mpris];})
-    clematis # Discord rich presence
-  ];
-
-  nixpkgs.overlays = [ 
-    (final: prev: {
-      brave = prev.brave.override {
-        commandLineArgs =
-        "--enable-features=TouchpadOverscrollHistoryNavigation";
-      };
-    })
-  ];
-  
-  programs = {
-    hyprland = {
-      enable = true;
-      xwayland.enable = true;
-    };
-    hyprlock.enable = true;
-    waybar.enable = true;
-    dconf.enable = true; # needed for wpgtk
-  };
-  
-  xdg.portal = {
-    enable = true;
-    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
-    wlr.enable = true;
+  options = {
+    gui.enable = lib.mkEnableOption "enables gui module";
   };
 
-  environment.sessionVariables = {
-    # Hint electron apps to use wayland
-    NIXOS_OZONE_WL = 1;
+  config = lib.mkIf config.gui.enable {
+    environment.systemPackages = with pkgs; [
+      kitty
+      neovide
+      dunst
+      libnotify # dunst depends on this
+      brave
+      armcord
+      pcmanfm
+      gvfs # ftp support for pcmanfm
+      wl-clipboard
+      telegram-desktop
+      modrinth-app
+      anki-bin
+      libreoffice
+      zathura
+      pavucontrol
+      hyprshot
+      whatsapp-for-linux
+      mpd
+      (ncmpcpp.override { visualizerSupport = true; })
 
-    # FIx Dolphin
-    QT_QPA_PLATFORM = "wayland";
-    QT_QPA_PLATFORMTHEME = "qt5ct";
-  };
+      # MPRIS
+      playerctl
+      mpdris2 # mpd
+      (mpv.override {scripts = with mpvScripts; [mpris];})
+      clematis # Discord rich presence
+    ];
 
-  services = {
-    # Enable CUPS to print documents.
-    printing.enable = true;
-
-    # Enable sound.
-    pipewire = {
-      enable = true;
-      pulse.enable = true;
-    };
-
-    # Enable touchpad support (enabled default in most desktopManager).
-    libinput.enable = true;
-
-    # Star hyprland automatically
-    greetd = {
-      enable = true;
-      settings = rec {
-        initial_session = {
-          command = "${pkgs.hyprland}/bin/hyprland";
-          user = "cylian";
+    nixpkgs.overlays = [ 
+      (final: prev: {
+        brave = prev.brave.override {
+          commandLineArgs =
+          "--enable-features=TouchpadOverscrollHistoryNavigation";
         };
-        default_session = initial_session;
+      })
+    ];
+    
+    programs = {
+      hyprland = {
+        enable = true;
+        xwayland.enable = true;
+      };
+      hyprlock.enable = true;
+      waybar.enable = true;
+      dconf.enable = true; # needed for wpgtk
+    };
+    
+    fonts.packages = with pkgs; [
+      noto-fonts-cjk-serif
+    ];
+
+    xdg.portal = {
+      enable = true;
+      extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+      wlr.enable = true;
+    };
+
+    environment.sessionVariables = {
+      # Hint electron apps to use wayland
+      NIXOS_OZONE_WL = 1;
+
+      # Fix Anki
+      QT_QPA_PLATFORM = "wayland";
+      QT_QPA_PLATFORMTHEME = "qt5ct";
+      ANKI_WAYLAND = 1;
+    };
+
+    services = {
+      # Enable CUPS to print documents.
+      printing.enable = true;
+
+      # Enable sound.
+      pipewire = {
+        enable = true;
+        pulse.enable = true;
+      };
+
+      # Enable touchpad support (enabled default in most desktopManager).
+      libinput.enable = true;
+
+      # Star hyprland automatically
+      greetd = {
+        enable = true;
+        settings = rec {
+          initial_session = {
+            command = "${pkgs.hyprland}/bin/hyprland";
+            user = "cylian";
+          };
+          default_session = initial_session;
+        };
       };
     };
-  };
 
-  hardware = {
-    bluetooth.enable = true;
-    opengl.enable = true;
-    nvidia.modesetting.enable = true;
+    hardware = {
+      bluetooth.enable = true;
+      graphics.enable = true;
+      nvidia.modesetting.enable = true;
+    };
   };
 }

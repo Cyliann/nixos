@@ -2,12 +2,13 @@
 {
   imports =
     [
-    ./hardware-configuration.nix
+      ./hardware-configuration.nix
       inputs.home-manager.nixosModules.default
-      ../../modules/base-config.nix
-      ../../modules/terminal.nix
-      ../../modules/utils.nix
+      ../../modules/modules.nix
     ];
+
+  terminal.enable = true;
+  utils.enable = true;
     
   networking.hostName = "server";
 
