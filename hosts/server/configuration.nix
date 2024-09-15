@@ -1,4 +1,4 @@
-{ inputs, ... }:
+{ inputs, pkgs, ... }:
 {
   imports =
     [
@@ -27,4 +27,28 @@
 
   };
 
+  systemd.services."ddns-update" = {
+    description = "Dynamic DNS Updater";
+    wantedBy = [ "multi-user.target" ];
+    path = [ 
+      pkgs.curl
+      pkgs.logger
+      ];
+    serviceConfig = {
+      Type = "oneshot";
+      ExecStart = "${pkgs.bash}/bin/bash /home/cylian/cloudflare-ddns-updater/cloudflare.sh";
+      User = "cylian";
+      Group = "users";
+    };
+  };
+  
+  systemd.timers."ddns-update" = {
+    description = "Dynamic DNS Updater";
+    wantedBy = [ "timers.target" ];
+    timerConfig = {
+      OnBootSec = "1m";
+      OnUnitActiveSec = "1m";
+      Unit = "ddns-update.service";                                                                                                                                  
+    };
+  };
 }
