@@ -26,11 +26,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1725948275,
-        "narHash": "sha256-4QOPemDQ9VRLQaAdWuvdDBhh+lEUOAnSMHhdr4nS1mk=",
+        "lastModified": 1726357542,
+        "narHash": "sha256-p4OrJL2weh0TRtaeu1fmNYP6+TOp/W2qdaIJxxQay4c=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "e5fa72bad0c6f533e8d558182529ee2acc9454fe",
+        "rev": "e524c57b1fa55d6ca9d8354c6ce1e538d2a1f47f",
         "type": "github"
       },
       "original": {
@@ -67,17 +67,17 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1723972050,
-        "narHash": "sha256-HltHYeuFluHuK1KlwjJMs5xHr+M3oXf8QkzTmQgSdg4=",
-        "ref": "6c8615c27830d788bd04f3fd7610b13e5fbef495",
-        "rev": "6c8615c27830d788bd04f3fd7610b13e5fbef495",
-        "revCount": 207,
-        "type": "git",
-        "url": "file:/home/cylian/.config/ags"
+        "lastModified": 1726381740,
+        "narHash": "sha256-AApj7W5DB3+4nAUlck3zRJr+1/nqW363h/hSBrvuvZg=",
+        "owner": "Jas-SinghFSU",
+        "repo": "HyprPanel",
+        "rev": "8c2537b917b66a1bbfb1ea66cc24f04805cb5fa1",
+        "type": "github"
       },
       "original": {
-        "type": "git",
-        "url": "file:/home/cylian/.config/ags"
+        "owner": "Jas-SinghFSU",
+        "repo": "HyprPanel",
+        "type": "github"
       }
     },
     "nixos-06cb-009a-fingerprint-sensor": {
@@ -147,11 +147,11 @@
     },
     "nixpkgs_4": {
       "locked": {
-        "lastModified": 1725634671,
-        "narHash": "sha256-v3rIhsJBOMLR8e/RNWxr828tB+WywYIoajrZKFM+0Gg=",
+        "lastModified": 1726243404,
+        "narHash": "sha256-sjiGsMh+1cWXb53Tecsm4skyFNag33GPbVgCdfj3n9I=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "574d1eac1c200690e27b8eb4e24887f8df7ac27c",
+        "rev": "345c263f2f53a3710abe117f28a5cb86d0ba4059",
         "type": "github"
       },
       "original": {
