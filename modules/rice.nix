@@ -1,5 +1,10 @@
-{ pkgs, lib, config, inputs, ... }:
 {
+  pkgs,
+  lib,
+  config,
+  inputs,
+  ...
+}: {
   options = {
     rice.enable = lib.mkEnableOption "enables rice module";
   };
@@ -23,7 +28,7 @@
       stow
       inputs.rose-pine-hyprcursor.packages.${pkgs.system}.default
     ];
-  
+
     fonts.packages = with pkgs; [
       font-awesome
     ];

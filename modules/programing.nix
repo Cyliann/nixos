@@ -15,10 +15,16 @@
         requests
         numpy
         pandas
+        basedpyright
       ]))
       poetry # python library management
       jupyter
       luajitPackages.luarocks
+      # Nix LSP dependencies
+      nixd
+      alejandra
+      deadnix
+      statix
     ];
 
     fonts.packages = with pkgs; [

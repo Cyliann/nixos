@@ -1,18 +1,20 @@
-{  pkgs, inputs, ... }:
 {
-  imports =
-    [
-      ./hardware-configuration.nix
-      inputs.home-manager.nixosModules.default
-      ../../modules/modules.nix
-    ];
+  pkgs,
+  inputs,
+  ...
+}: {
+  imports = [
+    ./hardware-configuration.nix
+    inputs.home-manager.nixosModules.default
+    ../../modules/modules.nix
+  ];
 
   programming.enable = true;
   gui.enable = true;
   utils.enable = true;
   terminal.enable = true;
   rice.enable = true;
-    
+
   networking.hostName = "thickpad";
 
   boot = {
@@ -22,12 +24,12 @@
       verbose = false;
     };
 
-    kernelParams = [ "quiet" "splash" "rd.systemd.show_status=false" "rd.udev.log_level=3" "udev.log_priority=3" "boot.shell_on_fail" ];
+    kernelParams = ["quiet" "splash" "rd.systemd.show_status=false" "rd.udev.log_level=3" "udev.log_priority=3" "boot.shell_on_fail"];
 
-    plymouth =  rec {
+    plymouth = rec {
       enable = true;
       theme = "lone";
-      themePackages = [(pkgs.adi1090x-plymouth-themes.override { selected_themes = [ theme ]; }) ];
+      themePackages = [(pkgs.adi1090x-plymouth-themes.override {selected_themes = [theme];})];
     };
 
     loader = {
@@ -40,9 +42,11 @@
     bolt # thunderbolt management
   ];
 
+  programs.openvpn3.enable = true;
+
   home-manager = {
     # also pass inputs to home-manager modules
-    extraSpecialArgs = { inherit inputs; };
+    extraSpecialArgs = {inherit inputs;};
     users = {
       "cylian" = import ./home.nix;
     };
