@@ -1,5 +1,9 @@
-{ pkgs, lib, config, ... }:
 {
+  pkgs,
+  lib,
+  config,
+  ...
+}: {
   options = {
     gui.enable = lib.mkEnableOption "enables gui module";
   };
@@ -16,7 +20,6 @@
       gvfs # ftp support for pcmanfm
       wl-clipboard
       telegram-desktop
-      modrinth-app
       anki-bin
       libreoffice
       zathura
@@ -24,7 +27,7 @@
       hyprshot
       whatsapp-for-linux
       mpd
-      (ncmpcpp.override { visualizerSupport = true; })
+      (ncmpcpp.override {visualizerSupport = true;})
 
       # MPRIS
       playerctl
@@ -33,15 +36,14 @@
       clematis # Discord rich presence
     ];
 
-    nixpkgs.overlays = [ 
+    nixpkgs.overlays = [
       (final: prev: {
         brave = prev.brave.override {
-          commandLineArgs =
-          "--enable-features=TouchpadOverscrollHistoryNavigation";
+          commandLineArgs = "--enable-features=TouchpadOverscrollHistoryNavigation";
         };
       })
     ];
-    
+
     programs = {
       hyprland = {
         enable = true;
@@ -51,14 +53,14 @@
       waybar.enable = true;
       dconf.enable = true; # needed for wpgtk
     };
-    
+
     fonts.packages = with pkgs; [
       noto-fonts-cjk-serif
     ];
 
     xdg.portal = {
       enable = true;
-      extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+      extraPortals = [pkgs.xdg-desktop-portal-gtk];
       wlr.enable = true;
     };
 

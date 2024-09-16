@@ -1,5 +1,9 @@
-{ pkgs, lib, config, ... }:
 {
+  pkgs,
+  lib,
+  config,
+  ...
+}: {
   options = {
     utils.enable = lib.mkEnableOption "enables utils module";
   };
@@ -21,6 +25,7 @@
       btop
       sshfs
       file
+      ffmpeg
     ];
   };
 }

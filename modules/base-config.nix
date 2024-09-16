@@ -1,10 +1,8 @@
-{ pkgs, ... }:
+{pkgs, ...}: {
+  nix.settings.experimental-features = ["nix-command" "flakes"];
 
-{
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
-  
   networking.networkmanager.enable = true;
-  
+
   boot = {
     loader = {
       systemd-boot.enable = true;
@@ -44,7 +42,10 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.cylian = {
     isNormalUser = true;
-    extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
+    extraGroups = [
+      "wheel"
+      "netdev"
+    ]; # Enable ‘sudo’ for the user.
     shell = pkgs.zsh;
   };
 
@@ -63,7 +64,7 @@
     # Find zsh config
     ZDOTDIR = "$HOME/.config/zsh";
   };
-  
+
   # List services that you want to enable:
   services = {
     # Enable the OpenSSH daemon.
@@ -78,7 +79,6 @@
     22
     80
   ];
-  
+
   system.stateVersion = "24.05"; # Did you read the comment?
 }
-
