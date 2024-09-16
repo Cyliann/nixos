@@ -14,6 +14,7 @@
   utils.enable = true;
   terminal.enable = true;
   rice.enable = true;
+  latex.enable = true;
 
   networking.hostName = "thickpad";
 
