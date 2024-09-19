@@ -68,8 +68,10 @@
   # List services that you want to enable:
   services = {
     openssh.enable = true;
-
     ntp.enable = true;
+    gvfs.enable = true;
+    power-profiles-daemon.enable = true;
+    upower.enable = true;
   };
 
   # Open ports in the firewall.
