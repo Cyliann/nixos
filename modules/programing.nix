@@ -20,11 +20,11 @@
           requests
           numpy
           pandas
-          basedpyright
         ]))
       poetry # python library management
+      basedpyright
       jupyter
-      luajitPackages.luarocks
+      lua-language-server
       # Nix LSP dependencies
       nixd
       alejandra
