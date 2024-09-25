@@ -6,7 +6,7 @@
   imports = [
     ./hardware-configuration.nix
     inputs.home-manager.nixosModules.default
-    ../../modules/modules.nix
+    ../../modules/nixos/modules.nix
   ];
 
   programming.enable = true;
