@@ -20,6 +20,7 @@
           requests
           numpy
           pandas
+          matplotlib
         ]))
       poetry # python library management
       basedpyright

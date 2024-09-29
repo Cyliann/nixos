@@ -26,6 +26,7 @@
       sshfs
       file
       ffmpeg
+      jq
     ];
   };
 }
