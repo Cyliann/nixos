@@ -8,5 +8,6 @@
     ./rice.nix
     ./fingerprint.nix
     ./latex.nix
+    ./battery.nix
   ];
 }

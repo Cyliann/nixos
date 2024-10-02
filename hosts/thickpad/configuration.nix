@@ -9,6 +9,7 @@
     ../../modules/nixos/modules.nix
   ];
 
+  battery.enable = true;
   programming.enable = true;
   gui.enable = true;
   utils.enable = true;
