@@ -34,6 +34,7 @@
       mpdris2 # mpd
       (mpv.override {scripts = with mpvScripts; [mpris];})
       clematis # Discord rich presence
+      kdeconnect
     ];
 
     nixpkgs.overlays = [

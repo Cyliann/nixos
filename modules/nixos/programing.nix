@@ -24,7 +24,6 @@
         ]))
       poetry # python library management
       basedpyright
-      jupyter
       lua-language-server
       # Nix LSP dependencies
       nixd
