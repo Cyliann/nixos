@@ -10,7 +10,6 @@
     };
   };
 
-  # Set your time zone.
   time.timeZone = "Europe/Amsterdam";
 
   # Select internationalisation properties.
@@ -39,13 +38,12 @@
   };
   console.keyMap = "pl";
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.cylian = {
     isNormalUser = true;
     extraGroups = [
       "wheel"
       "netdev"
-    ]; # Enable ‘sudo’ for the user.
+    ];
     shell = pkgs.zsh;
   };
 
@@ -65,7 +63,6 @@
     ZDOTDIR = "$HOME/.config/zsh";
   };
 
-  # List services that you want to enable:
   services = {
     openssh.enable = true;
     ntp.enable = true;
@@ -73,11 +70,10 @@
     upower.enable = true;
   };
 
-  # Open ports in the firewall.
   networking.firewall.allowedTCPPorts = [
     22
     80
   ];
 
-  system.stateVersion = "24.05"; # Did you read the comment?
+  system.stateVersion = "24.05";
 }
