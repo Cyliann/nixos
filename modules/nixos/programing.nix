@@ -12,6 +12,7 @@
     environment.systemPackages = with pkgs; [
       gcc
       cargo
+      go
       bun
       ntfs3g
       killall
