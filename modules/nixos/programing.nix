@@ -10,12 +10,19 @@
 
   config = lib.mkIf config.programming.enable {
     environment.systemPackages = with pkgs; [
+      # C
       gcc
+
+      # Rust
       cargo
+
+      # Go
       go
+
+      # JS
       bun
-      ntfs3g
-      killall
+
+      # Python
       (python311.withPackages (ps:
         with ps; [
           requests
@@ -25,7 +32,10 @@
         ]))
       poetry # python library management
       basedpyright
+
+      # Lua LSP
       lua-language-server
+
       # Nix LSP dependencies
       nixd
       alejandra
