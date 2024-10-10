@@ -32,7 +32,7 @@
         ];
       };
       server = nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit system inputs;};
+        specialArgs = {inherit system inputs pkgs;};
         modules = [
           inputs.nixos-06cb-009a-fingerprint-sensor.nixosModules.open-fprintd
           inputs.nixos-06cb-009a-fingerprint-sensor.nixosModules.python-validity
