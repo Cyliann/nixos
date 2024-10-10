@@ -27,7 +27,8 @@
       file
       ffmpeg
       jq
-      tailscale
     ];
+
+    services.tailscale.enable = true;
   };
 }
