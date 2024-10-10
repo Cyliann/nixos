@@ -1,5 +1,5 @@
 {...}: {
-  inputs = [
+  imports = [
     ../../modules/home-manager/modules.nix
   ];
 

@@ -20,6 +20,10 @@
 
   virtualisation.docker.storageDriver = "btrfs";
 
+  environment.systemPackages = with pkgs; [
+    tailscale
+  ];
+
   home-manager = {
     # also pass inputs to home-manager modules
     extraSpecialArgs = {inherit inputs;};
