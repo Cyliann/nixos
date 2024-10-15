@@ -18,6 +18,10 @@
 
       # Go
       go
+      gopls
+
+      # GLSL
+      glsl_analyzer
 
       # JS
       bun
@@ -29,6 +33,8 @@
           numpy
           pandas
           matplotlib
+          typing-extensions
+          pytest
         ]))
       poetry # python library management
       basedpyright
