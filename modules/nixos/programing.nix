@@ -51,6 +51,7 @@
 
     fonts.packages = with pkgs; [
       fira-code-nerdfont
+      jetbrains-mono
     ];
   };
 }
