@@ -1,5 +1,9 @@
-{ pkgs, lib, config, ... }:
 {
+  pkgs,
+  lib,
+  config,
+  ...
+}: {
   options = {
     terminal.enable = lib.mkEnableOption "enables terminal module";
   };
@@ -13,6 +17,7 @@
       lf
       ranger
       pistol
+      yazi
     ];
   };
 }
