@@ -15,7 +15,7 @@
       dunst
       libnotify # dunst depends on this
       brave
-      armcord
+      legcord
       pcmanfm
       gvfs # ftp support for pcmanfm
       wl-clipboard
