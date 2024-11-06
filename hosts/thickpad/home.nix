@@ -12,6 +12,7 @@
     gtk.enable = true;
     git.enable = true;
     nvim.enable = true;
+    rofi.enable = true;
   };
 
   home.sessionVariables = {
