@@ -42,7 +42,7 @@
     isNormalUser = true;
     extraGroups = [
       "wheel"
-      "netdev"
+      "networkmanager"
     ];
     shell = pkgs.zsh;
   };

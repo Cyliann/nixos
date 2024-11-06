@@ -42,6 +42,7 @@
   environment.systemPackages = with pkgs; [
     brightnessctl
     bolt # thunderbolt management
+    android-tools
   ];
 
   # Firewall rule for KDE connect
@@ -58,7 +59,7 @@
     }
   ];
 
-  programs.openvpn3.enable = true;
+  virtualisation.docker.enable = true;
 
   home-manager = {
     # also pass inputs to home-manager modules
