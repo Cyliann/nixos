@@ -13,7 +13,6 @@
     environment.systemPackages = with pkgs; [
       pywal
       wpgtk
-      rofi-wayland
       hyprpaper
       hyprpanel
       hyprcursor

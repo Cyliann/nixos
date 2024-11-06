@@ -3,5 +3,6 @@
     ./git.nix
     ./gtk.nix
     ./nvim.nix
+    ./rofi.nix
   ];
 }
