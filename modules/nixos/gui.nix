@@ -27,14 +27,14 @@
       hyprshot
       whatsapp-for-linux
       mpd
-      (ncmpcpp.override {visualizerSupport = true;})
+      rmpc
 
       # MPRIS
       playerctl
       mpdris2 # mpd
       (mpv.override {scripts = with mpvScripts; [mpris];})
       clematis # Discord rich presence
-      kdeconnect
+      plasma5Packages.kdeconnect-kde
     ];
 
     nixpkgs.overlays = [
