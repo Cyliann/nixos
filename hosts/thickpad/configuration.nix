@@ -64,6 +64,7 @@
   home-manager = {
     # also pass inputs to home-manager modules
     extraSpecialArgs = {inherit inputs;};
+    backupFileExtension = "hm.bak";
     users = {
       "cylian" = import ./home.nix;
     };

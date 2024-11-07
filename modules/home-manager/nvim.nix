@@ -3,9 +3,7 @@
   config,
   ...
 }: {
-  options = {
-    modules.nvim.enable = lib.mkEnableOption "enables nvim config";
-  };
+  options.modules.nvim.enable = lib.mkEnableOption "enables nvim config";
 
   config = lib.mkIf config.modules.nvim.enable {
     programs.neovim = {

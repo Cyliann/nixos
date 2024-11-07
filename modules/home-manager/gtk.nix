@@ -4,9 +4,7 @@
   config,
   ...
 }: {
-  options = {
-    modules.gtk.enable = lib.mkEnableOption "enables gtk config";
-  };
+  options.modules.gtk.enable = lib.mkEnableOption "enables gtk config";
 
   config = lib.mkIf config.modules.gtk.enable {
     gtk = {

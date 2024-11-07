@@ -3,9 +3,7 @@
   config,
   ...
 }: {
-  options = {
-    modules.git.enable = lib.mkEnableOption "enables git config";
-  };
+  options.modules.git.enable = lib.mkEnableOption "enables git config";
 
   config = lib.mkIf config.modules.git.enable {
     programs.git = {
