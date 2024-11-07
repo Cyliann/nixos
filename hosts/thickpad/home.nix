@@ -13,6 +13,7 @@
     git.enable = true;
     nvim.enable = true;
     rofi.enable = true;
+    ags.enable = true;
   };
 
   home.sessionVariables = {

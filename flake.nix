@@ -6,6 +6,7 @@
     hyprpanel.url = "github:Jas-SinghFSU/HyprPanel";
     nixos-06cb-009a-fingerprint-sensor.url = "github:ahbnr/nixos-06cb-009a-fingerprint-sensor";
     rose-pine-hyprcursor.url = "github:ndom91/rose-pine-hyprcursor";
+    ags.url = "github:Aylur/ags";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";

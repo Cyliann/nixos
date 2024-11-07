@@ -5,13 +5,12 @@
   config,
   ...
 }: {
-  options = {
-    ags.enable = lib.mkEnableOption "enables ags config";
-  };
+  imports = [inputs.ags.homeManagerModules.default];
 
-  config = lib.mkIf config.ags.enable {
+  options.modules.ags.enable = lib.mkEnableOption "enables ags config";
+
+  config = lib.mkIf config.modules.ags.enable {
     # add the home manager module
-    imports = [inputs.ags.homeManagerModules.default];
 
     programs.ags = {
       enable = true;

@@ -4,5 +4,6 @@
     ./gtk.nix
     ./nvim.nix
     ./rofi.nix
+    ./ags.nix
   ];
 }
