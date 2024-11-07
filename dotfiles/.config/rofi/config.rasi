@@ -1,5 +1,5 @@
 configuration {
-    modi: "window,drun,run,emoji";
+    modi: "window,drun,run,calc";
     display-drun: "";
     show-icons: true;
     kb-row-up: "Up,Control+k,Shift+Tab";

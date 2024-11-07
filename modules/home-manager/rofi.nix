@@ -15,10 +15,11 @@
           rofi-unwrapped = pkgs.rofi-wayland-unwrapped;
         })
       ];
+      configPath = "/tmp/hm-rofi.cfg";
     };
 
     home = {
-      file."${config.home.homeDirectory}.config/rofi".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos/dotfiles/.config/rofi";
+      file."/home/cylian/.config/rofi".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos/dotfiles/.config/rofi";
     };
   };
 }
