@@ -25,6 +25,7 @@
 
       # JS
       bun
+      typescript-language-server
 
       # Python
       (python311.withPackages (ps:
