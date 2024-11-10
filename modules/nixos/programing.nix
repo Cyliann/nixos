@@ -36,6 +36,8 @@
           matplotlib
           typing-extensions
           pytest
+          yt-dlp
+          ytmusicapi
         ]))
       poetry # python library management
       basedpyright
