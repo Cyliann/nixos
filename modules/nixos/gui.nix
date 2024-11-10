@@ -83,11 +83,6 @@
       pipewire = {
         enable = true;
         pulse.enable = true;
-        extraConfig.pipewire."92-low-latency" = {
-          "context.properties" = {
-            "default.clock.rate" = 24000; # Fix crackling audio
-          };
-        };
       };
 
       # Enable touchpad support (enabled default in most desktopManager).

@@ -5,5 +5,6 @@
     ./nvim.nix
     ./rofi.nix
     ./ags.nix
+    ./easyeffects.nix
   ];
 }

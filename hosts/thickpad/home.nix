@@ -14,6 +14,7 @@
     nvim.enable = true;
     rofi.enable = true;
     ags.enable = true;
+    easyeffects.enable = true;
   };
 
   home.sessionVariables = {
