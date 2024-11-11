@@ -9,5 +9,6 @@
     ./fingerprint.nix
     ./latex.nix
     ./battery.nix
+    ./jupyter.nix
   ];
 }

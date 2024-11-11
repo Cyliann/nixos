@@ -31,9 +31,6 @@
       (python311.withPackages (ps:
         with ps; [
           requests
-          numpy
-          pandas
-          matplotlib
           typing-extensions
           pytest
           yt-dlp
