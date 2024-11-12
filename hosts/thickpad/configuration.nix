@@ -16,7 +16,6 @@
   terminal.enable = true;
   rice.enable = true;
   latex.enable = true;
-  jupyter.enable = true;
 
   networking.hostName = "thickpad";
 

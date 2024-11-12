@@ -35,6 +35,18 @@
           pytest
           yt-dlp
           ytmusicapi
+
+          # for jupyter and DS
+          jupyter
+          ipython
+          jupytext
+
+          numpy
+          pandas
+          matplotlib
+          scikit-learn
+          seaborn
+          statsmodels
         ]))
       poetry # python library management
       basedpyright
