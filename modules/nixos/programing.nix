@@ -41,6 +41,10 @@
           ipython
           jupytext
 
+          # for molten.nvim
+          jupyter-client
+          pynvim
+
           numpy
           pandas
           matplotlib
@@ -50,6 +54,7 @@
         ]))
       poetry # python library management
       basedpyright
+      ruff
 
       # Lua LSP
       lua-language-server
