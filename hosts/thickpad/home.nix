@@ -13,9 +13,8 @@
     git.enable = true;
     nvim.enable = true;
     rofi.enable = true;
-    ags.enable = true;
+    # ags.enable = true;
     easyeffects.enable = true;
-    cursor.enable = true;
   };
 
   home.sessionVariables = {

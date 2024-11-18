@@ -4,8 +4,7 @@
     ./gtk.nix
     ./nvim.nix
     ./rofi.nix
-    ./ags.nix
+    # ./ags.nix
     ./easyeffects.nix
-    ./cursor.nix
   ];
 }
