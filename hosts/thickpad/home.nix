@@ -15,6 +15,7 @@
     rofi.enable = true;
     # ags.enable = true;
     easyeffects.enable = true;
+    mime.enable = true;
   };
 
   home.sessionVariables = {
