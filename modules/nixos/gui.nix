@@ -12,7 +12,7 @@
     environment.systemPackages = with pkgs; [
       kitty
       neovide
-      dunst
+      swaynotificationcenter
       libnotify # dunst depends on this
       brave
       legcord
