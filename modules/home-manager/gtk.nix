@@ -18,10 +18,17 @@
         package = pkgs.vimix-icon-theme;
       };
       cursorTheme = {
-        name = "Vimix-White";
-        package = pkgs.vimix-cursors;
+        name = "breezex-rosepinedawn";
+        package = pkgs.rose-pine-cursor;
         size = 28;
       };
+    };
+
+    home.pointerCursor = {
+      name = "breezex-rosepinedawn";
+      package = pkgs.rose-pine-cursor;
+      size = 28;
+      gtk.enable = true;
     };
   };
 }
