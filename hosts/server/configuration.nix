@@ -28,6 +28,11 @@
     };
   };
 
+  services.openssh.settings = {
+    PasswordAuthentication = false;
+    PermitRootLogin = false;
+  };
+
   systemd.services."ddns-update" = {
     description = "Dynamic DNS Updater";
     wantedBy = ["multi-user.target"];
