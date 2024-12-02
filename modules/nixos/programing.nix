@@ -15,6 +15,7 @@
 
       # Rust
       cargo
+      rust-analyzer
 
       # Go
       go

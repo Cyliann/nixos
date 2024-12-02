@@ -1,0 +1,55 @@
+configuration {
+    modi: "window,drun,run,calc";
+    display-drun: "";
+    show-icons: true;
+    kb-row-up: "Up,Control+k,Shift+Tab";
+    kb-row-down: "Down,Control+j";
+    kb-accept-entry: "Control+l,Return,KP_Enter";
+    terminal: "kitty";
+    kb-remove-to-eol: "Control+Shift+e";
+    kb-remove-char-back: "BackSpace";
+    kb-mode-complete: "Control+m";
+}
+
+* {
+    font: "Agave Nerd Font 12";
+    text-color: #f8f8f2;
+    background-color: #282a36;
+    active-background: #6272a4;
+    urgent-background: #ff5555;
+    selected-background: @active-background;
+    selected-urgent-background: @urgent-background;
+    selected-active-background: @active-background;
+    separatorcolor: @active-background;
+    bordercolor: @active-background;
+}
+
+window {
+    background-color: @background;
+    border:           1;
+    border-radius: 6;
+    border-color: @bordercolor;
+    padding:          5;
+    width: 25%;
+}
+
+mainbox {
+    border:  0;
+    padding: 0;
+}
+
+message {
+    border:       1px dash 0px 0px ;
+    border-color: @separatorcolor;
+    padding:      1px ;
+}
+
+textbox {
+    text-color: @foreground;
+}
+
+element-icon { 
+	size: 1.65ch; 
+}
+
+@import "~/.cache/wal/colors-rofi-dark.rasi"

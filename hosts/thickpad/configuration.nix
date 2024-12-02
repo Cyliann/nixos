@@ -59,7 +59,10 @@
     }
   ];
 
-  virtualisation.docker.enable = true;
+  virtualisation.docker = {
+    enable = true;
+    liveRestore = false;
+  };
 
   home-manager = {
     # also pass inputs to home-manager modules
