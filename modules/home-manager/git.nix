@@ -10,6 +10,12 @@
       enable = true;
       userName = "Cyliann";
       userEmail = "maksymilian@cych.eu";
+      extraConfig = {
+        # Sign all commits using ssh key
+        commit.gpgsign = true;
+        gpg.format = "ssh";
+        user.signingkey = "~/.ssh/git.pub";
+      };
     };
   };
 }
