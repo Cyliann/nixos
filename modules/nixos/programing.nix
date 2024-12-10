@@ -15,6 +15,7 @@
 
       # Rust
       cargo
+      rustup
       rust-analyzer
 
       # Go
@@ -29,7 +30,7 @@
       typescript-language-server
 
       # Python
-      (python311.withPackages (ps:
+      (python312.withPackages (ps:
         with ps; [
           requests
           typing-extensions
@@ -52,6 +53,7 @@
           scikit-learn
           seaborn
           statsmodels
+          uv
         ]))
       poetry # python library management
       basedpyright
