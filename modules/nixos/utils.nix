@@ -27,6 +27,7 @@
       file
       ffmpeg
       jq
+      eza
     ];
 
     services.tailscale.enable = true;
