@@ -28,6 +28,8 @@
       whatsapp-for-linux
       mpd
       rmpc
+      syncthing
+      protonvpn-gui
 
       # MPRIS
       playerctl
