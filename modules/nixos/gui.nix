@@ -29,7 +29,7 @@
       mpd
       rmpc
       syncthing
-      protonvpn-gui
+      protonvpn-cli_2
 
       # MPRIS
       playerctl
@@ -65,6 +65,12 @@
       enable = true;
       extraPortals = [pkgs.xdg-desktop-portal-gtk];
       wlr.enable = true;
+    };
+
+    users.users.cylian = {
+      extraGroups = [
+        "nm-openvpn"
+      ];
     };
 
     environment.sessionVariables = {
