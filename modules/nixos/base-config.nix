@@ -44,7 +44,7 @@
       "wheel"
       "networkmanager"
     ];
-    shell = pkgs.zsh;
+    shell = pkgs.nushell;
   };
 
   # Some programs need SUID wrappers, can be configured further or are
