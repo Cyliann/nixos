@@ -28,7 +28,7 @@
       ffmpeg
       jq
       eza
-      starship
+      oh-my-posh
     ];
 
     services.tailscale.enable = true;
