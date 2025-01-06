@@ -75,5 +75,11 @@
     80
   ];
 
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-older-than 10d";
+  };
+
   system.stateVersion = "24.05";
 }
