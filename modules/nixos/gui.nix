@@ -2,6 +2,7 @@
   pkgs,
   lib,
   config,
+  inputs,
   ...
 }: {
   options = {
@@ -37,6 +38,7 @@
       (mpv.override {scripts = with mpvScripts; [mpris];})
       clematis # Discord rich presence
       plasma5Packages.kdeconnect-kde
+      inputs.muclic.packages.${system}.default
     ];
 
     nixpkgs.overlays = [
