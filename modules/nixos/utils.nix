@@ -28,6 +28,7 @@
       ffmpeg
       jq
       eza
+      starship
     ];
 
     services.tailscale.enable = true;
