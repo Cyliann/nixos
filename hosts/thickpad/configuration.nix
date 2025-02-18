@@ -46,6 +46,8 @@
     android-tools
   ];
 
+  nixpkgs.config.allowUnfree = true;
+
   # Firewall rule for KDE connect
   networking.firewall = {
     allowedTCPPortRanges = [
