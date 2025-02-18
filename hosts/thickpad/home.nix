@@ -16,6 +16,7 @@
     # ags.enable = true;
     easyeffects.enable = true;
     mime.enable = true;
+    zen-browser.enable = true;
   };
 
   home.sessionVariables = {

@@ -7,5 +7,6 @@
     # ./ags.nix
     ./easyeffects.nix
     ./mime.nix
+    ./zen-browser.nix
   ];
 }
