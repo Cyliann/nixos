@@ -13,11 +13,6 @@
       # C
       gcc
 
-      # Rust
-      cargo
-      rustup
-      rust-analyzer
-
       # Go
       go
       gopls
