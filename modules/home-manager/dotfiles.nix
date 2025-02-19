@@ -19,7 +19,7 @@
     };
 
     home = {
-      file.".config/*".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos/dotfiles/.config/*";
+      file.".config/rofi".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos/dotfiles/.config/rofi";
     };
   };
 }
