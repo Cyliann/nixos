@@ -4,9 +4,9 @@
   pkgs,
   ...
 }: {
-  options.modules.rofi.enable = lib.mkEnableOption "enables rofi config";
+  options.modules.dotfiles.enable = lib.mkEnableOption "enables dotfiles";
 
-  config = lib.mkIf config.modules.rofi.enable {
+  config = lib.mkIf config.modules.dotfiles.enable {
     programs.rofi = {
       enable = true;
       package = pkgs.rofi-wayland;
@@ -19,7 +19,7 @@
     };
 
     home = {
-      file."/home/cylian/.config/rofi".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos/dotfiles/.config/rofi";
+      file.".config/*".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos/dotfiles/.config/*";
     };
   };
 }

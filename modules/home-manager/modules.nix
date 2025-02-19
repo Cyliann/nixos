@@ -3,7 +3,7 @@
     ./git.nix
     ./gtk.nix
     ./nvim.nix
-    ./rofi.nix
+    ./dotfiles.nix
     # ./ags.nix
     ./easyeffects.nix
     ./mime.nix
