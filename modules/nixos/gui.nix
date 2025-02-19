@@ -31,6 +31,7 @@
       rmpc
       syncthing
       protonvpn-cli_2
+      appimage-run
 
       # MPRIS
       playerctl
