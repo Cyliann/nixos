@@ -29,6 +29,7 @@
       jq
       eza
       oh-my-posh
+      ouch
     ];
 
     services.tailscale.enable = true;
