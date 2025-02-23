@@ -12,10 +12,11 @@
     gtk.enable = true;
     git.enable = true;
     nvim.enable = true;
-    rofi.enable = true;
-    ags.enable = true;
+    dotfiles.enable = true;
+    # ags.enable = true;
     easyeffects.enable = true;
-    cursor.enable = true;
+    mime.enable = true;
+    zen-browser.enable = true;
   };
 
   home.sessionVariables = {

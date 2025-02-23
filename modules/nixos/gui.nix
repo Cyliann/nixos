@@ -2,6 +2,7 @@
   pkgs,
   lib,
   config,
+  inputs,
   ...
 }: {
   options = {
@@ -12,7 +13,7 @@
     environment.systemPackages = with pkgs; [
       kitty
       neovide
-      dunst
+      swaynotificationcenter
       libnotify # dunst depends on this
       brave
       legcord
@@ -28,6 +29,8 @@
       whatsapp-for-linux
       mpd
       rmpc
+      syncthing
+      protonvpn-cli_2
 
       # MPRIS
       playerctl
@@ -35,6 +38,7 @@
       (mpv.override {scripts = with mpvScripts; [mpris];})
       clematis # Discord rich presence
       plasma5Packages.kdeconnect-kde
+      inputs.muclic.packages.${system}.default
     ];
 
     nixpkgs.overlays = [
@@ -63,6 +67,12 @@
       enable = true;
       extraPortals = [pkgs.xdg-desktop-portal-gtk];
       wlr.enable = true;
+    };
+
+    users.users.cylian = {
+      extraGroups = [
+        "nm-openvpn"
+      ];
     };
 
     environment.sessionVariables = {

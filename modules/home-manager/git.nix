@@ -8,8 +8,14 @@
   config = lib.mkIf config.modules.git.enable {
     programs.git = {
       enable = true;
-      userName = "Maksymilian Cych";
+      userName = "Cyliann";
       userEmail = "maksymilian@cych.eu";
+      extraConfig = {
+        # Sign all commits using ssh key
+        commit.gpgsign = true;
+        gpg.format = "ssh";
+        user.signingkey = "~/.ssh/git.pub";
+      };
     };
   };
 }

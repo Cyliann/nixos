@@ -13,9 +13,6 @@
       # C
       gcc
 
-      # Rust
-      cargo
-
       # Go
       go
       gopls
@@ -28,19 +25,34 @@
       typescript-language-server
 
       # Python
-      (python311.withPackages (ps:
+      (python312.withPackages (ps:
         with ps; [
           requests
-          numpy
-          pandas
-          matplotlib
           typing-extensions
           pytest
           yt-dlp
           ytmusicapi
+
+          # for jupyter and DS
+          jupyter
+          ipython
+          jupytext
+
+          # for molten.nvim
+          jupyter-client
+          pynvim
+
+          numpy
+          pandas
+          matplotlib
+          scikit-learn
+          seaborn
+          statsmodels
+          uv
         ]))
       poetry # python library management
       basedpyright
+      ruff
 
       # Lua LSP
       lua-language-server
@@ -53,7 +65,7 @@
     ];
 
     fonts.packages = with pkgs; [
-      fira-code-nerdfont
+      nerd-fonts.fira-code
       jetbrains-mono
     ];
   };

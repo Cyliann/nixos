@@ -44,7 +44,7 @@
       "wheel"
       "networkmanager"
     ];
-    shell = pkgs.zsh;
+    shell = pkgs.nushell;
   };
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -74,6 +74,12 @@
     22
     80
   ];
+
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-older-than 10d";
+  };
 
   system.stateVersion = "24.05";
 }

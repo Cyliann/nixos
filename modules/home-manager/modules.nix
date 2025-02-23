@@ -3,9 +3,10 @@
     ./git.nix
     ./gtk.nix
     ./nvim.nix
-    ./rofi.nix
-    ./ags.nix
+    ./dotfiles.nix
+    # ./ags.nix
     ./easyeffects.nix
-    ./cursor.nix
+    ./mime.nix
+    ./zen-browser.nix
   ];
 }

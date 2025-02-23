@@ -27,6 +27,8 @@
       file
       ffmpeg
       jq
+      eza
+      oh-my-posh
     ];
 
     services.tailscale.enable = true;

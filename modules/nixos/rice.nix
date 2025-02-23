@@ -14,8 +14,6 @@
       pywal
       wpgtk
       hyprpaper
-      hyprpanel
-      hyprcursor
       swww
       sass
       fd
@@ -25,7 +23,8 @@
       adwaita-icon-theme
       matugen
       stow
-      inputs.rose-pine-hyprcursor.packages.${pkgs.system}.default
+      wlogout
+      inputs.ignis.packages.${system}.ignis
     ];
 
     fonts.packages = with pkgs; [
