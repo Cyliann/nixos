@@ -30,7 +30,7 @@
 
   services.openssh.settings = {
     PasswordAuthentication = false;
-    PermitRootLogin = false;
+    PermitRootLogin = "no";
   };
 
   systemd.services."ddns-update" = {
