@@ -18,14 +18,14 @@
         package = pkgs.vimix-icon-theme;
       };
       cursorTheme = {
-        name = "breezex-rosepinedawn";
+        name = "BreezeX-RosePineDawn-Linux";
         package = pkgs.rose-pine-cursor;
         size = 28;
       };
     };
 
     home.pointerCursor = {
-      name = "breezex-rosepinedawn";
+      name = "BreezeX-RosePineDawn-Linux";
       package = pkgs.rose-pine-cursor;
       size = 28;
       gtk.enable = true;
