@@ -1,6 +1,7 @@
 {
   lib,
   config,
+  pkgs,
   ...
 }:
 with lib; let
@@ -22,5 +23,9 @@ in {
         icon = logoPath;
       };
     };
+
+    home.packages = with pkgs; [
+      appimage-run
+    ];
   };
 }

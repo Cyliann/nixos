@@ -16,6 +16,7 @@
       swaynotificationcenter
       libnotify # dunst depends on this
       brave
+      # inputs.zen-browser.packages."${system}".default
       legcord
       pcmanfm
       gvfs # ftp support for pcmanfm
@@ -31,7 +32,6 @@
       rmpc
       syncthing
       protonvpn-cli_2
-      appimage-run
 
       # MPRIS
       playerctl
@@ -39,7 +39,7 @@
       (mpv.override {scripts = with mpvScripts; [mpris];})
       clematis # Discord rich presence
       plasma5Packages.kdeconnect-kde
-      inputs.muclic.packages.${system}.default
+      # inputs.muclic.packages.${system}.default
     ];
 
     nixpkgs.overlays = [
