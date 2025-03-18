@@ -53,6 +53,7 @@
       poetry # python library management
       basedpyright
       ruff
+      pipx
 
       # Lua LSP
       lua-language-server
