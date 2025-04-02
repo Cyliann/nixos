@@ -15,7 +15,6 @@
       neovide
       swaynotificationcenter
       libnotify # dunst depends on this
-      brave
       # inputs.zen-browser.packages."${system}".default
       legcord
       pcmanfm
