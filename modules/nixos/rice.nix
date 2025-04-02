@@ -14,6 +14,7 @@
       pywal
       wpgtk
       hyprpaper
+      inputs.hyprpanel.packages.${system}.default
       swww
       sass
       fd
