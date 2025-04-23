@@ -2,14 +2,18 @@
   pkgs,
   lib,
   config,
-  inputs,
   ...
-}: {
+}: 
+let 
+	huly = import ./apps/huly.nix { inherit pkgs; };
+in
+{
   options = {
     gui.enable = lib.mkEnableOption "enables gui module";
   };
 
   config = lib.mkIf config.gui.enable {
+
     environment.systemPackages = with pkgs; [
       kitty
       neovide
@@ -31,6 +35,7 @@
       rmpc
       syncthing
       protonvpn-cli_2
+      huly
 
       # MPRIS
       playerctl
