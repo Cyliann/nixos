@@ -4,9 +4,6 @@
   config,
   ...
 }: 
-let 
-	huly = import ./apps/huly.nix { inherit pkgs; };
-in
 {
   options = {
     gui.enable = lib.mkEnableOption "enables gui module";
@@ -35,7 +32,6 @@ in
       rmpc
       syncthing
       protonvpn-cli_2
-      huly
 
       # MPRIS
       playerctl
