@@ -15,6 +15,7 @@
       kitty
       neovide
       swaynotificationcenter
+      nwg-displays
       libnotify # dunst depends on this
       # inputs.zen-browser.packages."${system}".default
       legcord
