@@ -33,6 +33,7 @@
       rmpc
       syncthing
       protonvpn-cli_2
+      imv
 
       # MPRIS
       playerctl
