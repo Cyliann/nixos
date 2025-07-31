@@ -43,6 +43,7 @@
     extraGroups = [
       "wheel"
       "networkmanager"
+      "docker"
     ];
     shell = pkgs.nushell;
   };
