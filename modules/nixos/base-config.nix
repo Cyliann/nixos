@@ -45,7 +45,7 @@
       "networkmanager"
       "docker"
     ];
-    shell = pkgs.nushell;
+    shell = pkgs.zsh;
   };
 
   # Some programs need SUID wrappers, can be configured further or are
