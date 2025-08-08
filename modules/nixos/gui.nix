@@ -35,6 +35,11 @@
       protonvpn-cli_2
       imv
 
+      # Camera
+      ansel
+      gphoto2
+      gphoto2fs
+
       # MPRIS
       playerctl
       mpdris2 # mpd
