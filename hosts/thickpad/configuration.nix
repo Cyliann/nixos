@@ -44,6 +44,7 @@
     brightnessctl
     bolt # thunderbolt management
     android-tools
+    intel-ocl # opencl support for intel
   ];
 
   nixpkgs.config.allowUnfree = true;
