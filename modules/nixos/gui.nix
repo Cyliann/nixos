@@ -36,7 +36,7 @@
       imv
 
       # Camera
-      ansel
+      darktable
       gphoto2
       gphoto2fs
 
