@@ -2,7 +2,6 @@
   pkgs,
   lib,
   config,
-  inputs,
   ...
 }: {
   options = {
@@ -14,7 +13,6 @@
       pywal
       wpgtk
       hyprpaper
-      inputs.hyprpanel.packages.${system}.default
       swww
       sass
       fd
@@ -25,7 +23,6 @@
       matugen
       stow
       wlogout
-      inputs.ignis.packages.${system}.ignis
     ];
 
     fonts.packages = with pkgs; [

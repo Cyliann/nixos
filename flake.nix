@@ -4,7 +4,6 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixos-06cb-009a-fingerprint-sensor.url = "github:ahbnr/nixos-06cb-009a-fingerprint-sensor";
-    ignis.url = "git+https://github.com/linkfrg/ignis?submodules=1";
     # zen-browser.url = "github:0xc000022070/zen-browser-flake";
     # muclic = {
     #   url = "path:/home/cylian/git/muclic";
@@ -12,10 +11,6 @@
     # };
     home-manager = {
       url = "github:nix-community/home-manager";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    hyprpanel = {
-      url = "github:Jas-SinghFSU/HyprPanel";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
