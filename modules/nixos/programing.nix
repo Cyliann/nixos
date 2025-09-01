@@ -63,6 +63,9 @@
       alejandra
       deadnix
       statix
+
+      # For simple dev environments
+      devbox
     ];
 
     fonts.packages = with pkgs; [
