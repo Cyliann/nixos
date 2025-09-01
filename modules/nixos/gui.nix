@@ -2,6 +2,7 @@
   pkgs,
   lib,
   config,
+  inputs,
   ...
 }: 
 {
@@ -17,7 +18,6 @@
       swaynotificationcenter
       nwg-displays
       libnotify # dunst depends on this
-      # inputs.zen-browser.packages."${system}".default
       legcord
       pcmanfm
       gvfs # ftp support for pcmanfm
@@ -30,6 +30,7 @@
       hyprshot
       whatsapp-for-linux
       mpd
+      inputs.zen-browser.packages."${system}".default
       rmpc
       syncthing
       protonvpn-cli_2
