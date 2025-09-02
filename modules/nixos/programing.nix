@@ -64,8 +64,8 @@
       deadnix
       statix
 
-      # For simple dev environments
-      devbox
+      # Quality of life
+      direnv
     ];
 
     fonts.packages = with pkgs; [
