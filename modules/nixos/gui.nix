@@ -33,7 +33,7 @@
       inputs.zen-browser.packages."${system}".default
       rmpc
       syncthing
-      protonvpn-cli_2
+      protonvpn-gui
       imv
 
       # Camera
