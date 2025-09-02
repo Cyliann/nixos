@@ -30,6 +30,7 @@
       eza
       oh-my-posh
       ouch
+      wireshark
     ];
 
     services.tailscale.enable = true;
