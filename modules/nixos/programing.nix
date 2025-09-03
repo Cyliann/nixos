@@ -24,6 +24,9 @@
       bun
       typescript-language-server
 
+      # R
+      rstudioWrapper
+
       # Python
       (python312.withPackages (ps:
         with ps; [
