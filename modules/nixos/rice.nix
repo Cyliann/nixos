@@ -12,6 +12,7 @@
   config = lib.mkIf config.rice.enable {
     environment.systemPackages = with pkgs; [
       pywal
+      pywalfox-native
       wpgtk
       hyprpaper
       swww
