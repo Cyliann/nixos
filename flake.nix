@@ -11,6 +11,17 @@
         home-manager.follows = "home-manager";
       };
     };
+
+    noctalia = {
+      url = "github:noctalia-dev/noctalia-shell";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    quickshell = {
+      url = "github:outfoxxed/quickshell";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.quickshell.follows = "quickshell";
+    };
     # muclic = {
     #   url = "path:/home/cylian/git/muclic";
     #   inputs.nixpkgs.follows = "nixpkgs";

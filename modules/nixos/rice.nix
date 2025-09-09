@@ -2,6 +2,7 @@
   pkgs,
   lib,
   config,
+  inputs,
   ...
 }: {
   options = {
@@ -23,6 +24,8 @@
       matugen
       stow
       wlogout
+      inputs.noctalia.packages.${system}.default
+      inputs.quickshell.packages.${system}.default
     ];
 
     fonts.packages = with pkgs; [
