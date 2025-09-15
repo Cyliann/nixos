@@ -28,7 +28,7 @@
       rstudioWrapper
 
       # Python
-      (python312.withPackages (ps:
+      (python3.withPackages (ps:
         with ps; [
           requests
           typing-extensions
