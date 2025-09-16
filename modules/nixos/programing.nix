@@ -67,6 +67,9 @@
       deadnix
       statix
 
+      # Typst
+      tinymist
+
       # Quality of life
       direnv
     ];
