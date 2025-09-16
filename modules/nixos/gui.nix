@@ -46,7 +46,7 @@
       mpdris2 # mpd
       (mpv.override {scripts = with mpvScripts; [mpris];})
       clematis # Discord rich presence
-      plasma5Packages.kdeconnect-kde
+      kdePackages.kdeconnect-kde
       # inputs.muclic.packages.${system}.default
     ];
 
