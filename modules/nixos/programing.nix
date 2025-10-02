@@ -70,6 +70,11 @@
       # Typst
       tinymist
 
+      # Arduino
+      arduino-cli
+      arduino-language-server
+      llvmPackages.clang-tools
+
       # Quality of life
       direnv
     ];
