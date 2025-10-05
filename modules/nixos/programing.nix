@@ -73,7 +73,7 @@
       # Arduino
       arduino-cli
       arduino-language-server
-      llvmPackages.clang-tools
+      clangStdenv
 
       # Quality of life
       direnv
