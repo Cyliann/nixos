@@ -15,6 +15,7 @@
     dotfiles.enable = true;
     easyeffects.enable = true;
     mime.enable = true;
+    wlsunset.enable = true;
   };
 
   home.sessionVariables = {

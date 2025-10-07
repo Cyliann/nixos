@@ -4,7 +4,7 @@
     ./gtk.nix
     ./nvim.nix
     ./dotfiles.nix
-    # ./ags.nix
+    ./wlsunset.nix
     ./easyeffects.nix
     ./mime.nix
   ];
