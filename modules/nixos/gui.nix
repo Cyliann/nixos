@@ -23,6 +23,7 @@
       gvfs # ftp support for pcmanfm
       wl-clipboard
       telegram-desktop
+      zapzap # whatsapp
       anki-bin
       libreoffice
       zathura
