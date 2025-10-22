@@ -36,6 +36,7 @@
       syncthing
       protonvpn-gui
       imv
+      localsend
 
       # Camera
       darktable
