@@ -36,6 +36,7 @@
       syncthing
       protonvpn-gui
       imv
+      localsend
 
       # Camera
       darktable
@@ -93,6 +94,12 @@
       QT_QPA_PLATFORM = "wayland";
       QT_QPA_PLATFORMTHEME = "qt5ct";
       ANKI_WAYLAND = 1;
+    };
+
+    networking.firewall = {
+      # Localsend support
+      allowedTCPPorts = [ 53317 ];
+      allowedUDPPorts = [ 53317 ];
     };
 
     services = {
