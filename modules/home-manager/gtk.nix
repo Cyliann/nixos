@@ -10,11 +10,11 @@
     gtk = {
       enable = true;
       theme = {
-        name = "FlatColor";
-        package = pkgs.wpgtk;
+        name = "Materia-dark-compact";
+        package = pkgs.materia-theme;
       };
       iconTheme = {
-        name = "Vimix-White-dark";
+        name = "Vimix-white-dark";
         package = pkgs.vimix-icon-theme;
       };
       cursorTheme = {
