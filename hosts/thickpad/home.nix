@@ -16,6 +16,7 @@
     easyeffects.enable = true;
     mime.enable = true;
     wlsunset.enable = true;
+    kanshi.enable = true;
   };
 
   home.sessionVariables = {

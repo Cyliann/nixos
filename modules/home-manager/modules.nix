@@ -7,5 +7,6 @@
     ./wlsunset.nix
     ./easyeffects.nix
     ./mime.nix
+    ./kanshi.nix
   ];
 }
