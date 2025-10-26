@@ -44,5 +44,6 @@ config,
         "x-scheme-handler/unknown" = "ZenBrowser.desktop";
       };
     };
+    xdg.configFile."mimeapps.list".force = true;
   };
 }
