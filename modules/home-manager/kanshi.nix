@@ -1,8 +1,8 @@
 {
-  lib,
-  config,
-  ...
-  }: {
+lib,
+config,
+...
+}: {
   options.modules.kanshi.enable = lib.mkEnableOption "enables automatic display configuration";
 
   config = lib.mkIf config.modules.kanshi.enable {
@@ -10,19 +10,21 @@
       enable = true;
       systemdTarget = "hyprland-session.target";
 
-      profiles = {
-        undocked = {
-          outputs = [
+      settings = [
+        {
+          profile.name = "undocked";
+          profile.outputs = [
             {
               criteria = "eDP-1";
               scale = 1.2;
               status = "enable";
             }
           ];
-        };
+        }
+        {
 
-        docked = {
-          outputs = [
+          profile.name = "docked";
+          profile.outputs = [
             {
               criteria = "HDMI-A-1";
               status = "enable";
@@ -32,8 +34,8 @@
               status = "disable";
             }
           ];
-        };
-      };
+        }
+      ];
     };
   };
 }
