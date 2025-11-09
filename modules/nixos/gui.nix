@@ -49,6 +49,8 @@
       clematis # Discord rich presence
       kdePackages.kdeconnect-kde
       # inputs.muclic.packages.${system}.default
+
+      kdePackages.kdenlive
     ];
 
     nixpkgs.overlays = [
