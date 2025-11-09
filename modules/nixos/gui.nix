@@ -29,7 +29,6 @@
       zathura
       pavucontrol
       hyprshot
-      whatsapp-for-linux
       mpd
       inputs.zen-browser.packages."${system}".default
       rmpc
