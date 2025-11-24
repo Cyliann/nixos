@@ -2,6 +2,7 @@
   pkgs,
   lib,
   config,
+  inputs,
   ...
 }: {
   options = {
@@ -11,6 +12,7 @@
   config = lib.mkIf config.rice.enable {
     environment.systemPackages = with pkgs; [
       pywal
+      pywalfox-native
       wpgtk
       hyprpaper
       swww
@@ -23,6 +25,8 @@
       matugen
       stow
       wlogout
+      inputs.noctalia.packages.${system}.default
+      inputs.quickshell.packages.${system}.default
     ];
 
     fonts.packages = with pkgs; [

@@ -13,10 +13,10 @@
     git.enable = true;
     nvim.enable = true;
     dotfiles.enable = true;
-    # ags.enable = true;
     easyeffects.enable = true;
     mime.enable = true;
-    zen-browser.enable = true;
+    wlsunset.enable = true;
+    kanshi.enable = true;
   };
 
   home.sessionVariables = {

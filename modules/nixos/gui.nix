@@ -2,6 +2,7 @@
   pkgs,
   lib,
   config,
+  inputs,
   ...
 }: 
 {
@@ -17,23 +18,24 @@
       swaynotificationcenter
       nwg-displays
       libnotify # dunst depends on this
-      # inputs.zen-browser.packages."${system}".default
       legcord
       pcmanfm
       gvfs # ftp support for pcmanfm
       wl-clipboard
       telegram-desktop
+      zapzap # whatsapp
       anki-bin
       libreoffice
       zathura
       pavucontrol
       hyprshot
-      whatsapp-for-linux
       mpd
+      inputs.zen-browser.packages."${system}".default
       rmpc
       syncthing
-      protonvpn-cli_2
+      protonvpn-gui
       imv
+      localsend
 
       # Camera
       darktable
@@ -45,8 +47,10 @@
       mpdris2 # mpd
       (mpv.override {scripts = with mpvScripts; [mpris];})
       clematis # Discord rich presence
-      plasma5Packages.kdeconnect-kde
+      kdePackages.kdeconnect-kde
       # inputs.muclic.packages.${system}.default
+
+      kdePackages.kdenlive
     ];
 
     nixpkgs.overlays = [
@@ -91,6 +95,12 @@
       QT_QPA_PLATFORM = "wayland";
       QT_QPA_PLATFORMTHEME = "qt5ct";
       ANKI_WAYLAND = 1;
+    };
+
+    networking.firewall = {
+      # Localsend support
+      allowedTCPPorts = [ 53317 ];
+      allowedUDPPorts = [ 53317 ];
     };
 
     services = {

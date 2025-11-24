@@ -66,6 +66,15 @@
     allowedTCPPorts = [8096];
   };
 
+ services.avahi = {
+    enable = true;
+    nssmdns4 = true;
+    publish = {
+      enable = true;
+      addresses = true;
+    };
+  };
+
   virtualisation.docker = {
     enable = true;
     liveRestore = false;

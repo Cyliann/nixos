@@ -24,8 +24,11 @@
       bun
       typescript-language-server
 
+      # R
+      rstudioWrapper
+
       # Python
-      (python312.withPackages (ps:
+      (python3.withPackages (ps:
         with ps; [
           requests
           typing-extensions
@@ -63,6 +66,17 @@
       alejandra
       deadnix
       statix
+
+      # Typst
+      tinymist
+
+      # Arduino
+      arduino-cli
+      arduino-language-server
+      clangStdenv
+
+      # Quality of life
+      direnv
     ];
 
     fonts.packages = with pkgs; [
