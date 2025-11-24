@@ -31,6 +31,7 @@
       oh-my-posh
       ouch
       wireshark
+      screen
     ];
 
     services.tailscale.enable = true;
