@@ -77,6 +77,10 @@
 
       # Quality of life
       direnv
+      gh
+
+      #Julia
+      julia-bin
     ];
 
     fonts.packages = with pkgs; [
