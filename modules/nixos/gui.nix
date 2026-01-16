@@ -51,6 +51,7 @@
       # inputs.muclic.packages.${system}.default
 
       kdePackages.kdenlive
+      gimp
     ];
 
     nixpkgs.overlays = [
