@@ -124,7 +124,7 @@
         enable = true;
         settings = rec {
           initial_session = {
-            command = "${pkgs.hyprland}/bin/Hyprland";
+            command = "${pkgs.hyprland}/bin/start-hyprland";
             user = "cylian";
           };
           default_session = initial_session;
