@@ -78,6 +78,7 @@
       # Quality of life
       direnv
       gh
+      just
 
       #Julia
       julia-bin
