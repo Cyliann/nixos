@@ -51,6 +51,7 @@
       # inputs.muclic.packages.${system}.default
 
       kdePackages.kdenlive
+      gimp
     ];
 
     nixpkgs.overlays = [
@@ -123,7 +124,7 @@
         enable = true;
         settings = rec {
           initial_session = {
-            command = "${pkgs.hyprland}/bin/Hyprland";
+            command = "${pkgs.hyprland}/bin/start-hyprland";
             user = "cylian";
           };
           default_session = initial_session;

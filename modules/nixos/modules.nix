@@ -6,7 +6,6 @@
     ./programing.nix
     ./terminal.nix
     ./rice.nix
-    ./fingerprint.nix
     ./latex.nix
     ./battery.nix
   ];

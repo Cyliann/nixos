@@ -1,2 +1,5 @@
 dotfiles/.config/hypr/monitors.conf
+dotfiles/.config/hypr/workspaces.conf
 dotfiles/.config/rofi/wpg.rasi
+dotfiles/.config/noctalia/colors.json
+dotfiles/.config/noctalia/pam
