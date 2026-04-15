@@ -24,9 +24,6 @@
       bun
       typescript-language-server
 
-      # R
-      rstudioWrapper
-
       # Python
       (python3.withPackages (ps:
         with ps; [
@@ -53,10 +50,10 @@
           statsmodels
           uv
         ]))
-      poetry # python library management
       basedpyright
       ruff
       pipx
+      ty
 
       # Lua LSP
       lua-language-server

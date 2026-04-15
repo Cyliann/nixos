@@ -11,6 +11,9 @@
   };
 
   config = lib.mkIf config.gui.enable {
+    nixpkgs.config.permittedInsecurePackages = [
+      "electron-38.8.4"
+    ];
 
     environment.systemPackages = with pkgs; [
       kitty
@@ -50,8 +53,10 @@
       kdePackages.kdeconnect-kde
       # inputs.muclic.packages.${system}.default
 
-      kdePackages.kdenlive
+      # kdePackages.kdenlive
       gimp
+      slack
+      picard
     ];
 
     nixpkgs.overlays = [
@@ -99,10 +104,14 @@
     };
 
     networking.firewall = {
+      enable = false;
       # Localsend support
       allowedTCPPorts = [ 53317 ];
       allowedUDPPorts = [ 53317 ];
     };
+
+    # Allows pipewire to use realtime scheduler for lower latency
+    security.rtkit.enable = true;
 
     services = {
       gvfs.enable = true;
@@ -114,6 +123,15 @@
       pipewire = {
         enable = true;
         pulse.enable = true;
+        extraConfig.pipewire-pulse."10-crackling-fix" = {
+          "context.properties" = {
+            "default.clock.allowed-rates" = [ 44100 48000 96000 ];
+            "default.clock.quantum" = 256;
+            "default.clock.min-quantum" = 32;
+            "default.clock.max-quantum" = 1024;
+          };
+
+        };
       };
 
       # Enable touchpad support (enabled default in most desktopManager).

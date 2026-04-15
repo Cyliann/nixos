@@ -15,7 +15,7 @@
       pywalfox-native
       wpgtk
       hyprpaper
-      swww
+      awww
       sass
       fd
       brightnessctl
