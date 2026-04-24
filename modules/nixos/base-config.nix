@@ -67,6 +67,14 @@
     80
   ];
 
+  programs.nix-ld = {
+    enable = true;
+    libraries = with pkgs; [
+      stdenv.cc.cc.lib
+      zlib
+    ];
+  };
+
   nix.gc = {
     automatic = true;
     dates = "weekly";
