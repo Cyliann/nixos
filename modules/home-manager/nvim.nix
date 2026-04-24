@@ -1,6 +1,7 @@
 {
   lib,
   config,
+  pkgs,
   ...
 }: {
   options.modules.nvim.enable = lib.mkEnableOption "enables nvim config";
@@ -8,6 +9,9 @@
   config = lib.mkIf config.modules.nvim.enable {
     programs.neovim = {
       enable = true;
+      plugins = [
+        pkgs.vimPlugins.nvim-treesitter.withAllGrammars
+      ];
     };
 
     home = {
