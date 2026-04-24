@@ -73,13 +73,17 @@
       clangStdenv
 
       # Quality of life
-      direnv
       gh
       just
 
       #Julia
       julia-bin
     ];
+
+    programs.direnv = {
+      enable = true;
+      nix-direnv.enable = true;
+    };
 
     fonts.packages = with pkgs; [
       nerd-fonts.fira-code
