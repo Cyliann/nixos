@@ -12,8 +12,6 @@
     virtualisation = {
       libvirtd = {
         enable = true;
-        # Used for UEFI boot of Home Assistant OS guest image
-        qemuOvmf = true;
       };
     };
 
