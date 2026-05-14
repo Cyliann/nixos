@@ -76,6 +76,14 @@
     ];
   };
 
+  environment.systemPackages = with pkgs; [
+      # Nix LSP dependencies
+      nixd
+      alejandra
+      deadnix
+      statix
+  ];
+
   nix.gc = {
     automatic = true;
     dates = "weekly";
