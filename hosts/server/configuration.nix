@@ -9,6 +9,7 @@
 
   terminal.enable = true;
   utils.enable = true;
+  home-assistant.enable = true;
 
   networking.hostName = "server";
 
