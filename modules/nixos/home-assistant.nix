@@ -19,6 +19,9 @@ config,
       # For virt-install
       virt-manager
 
+      # For virtual desktop
+      spice
+
       # For lsusb
       usbutils
     ];
