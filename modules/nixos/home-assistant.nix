@@ -29,4 +29,5 @@
     users.users.cylian = {
       extraGroups = ["libvirtd"];
     };
-  }
+  };
+}
