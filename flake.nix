@@ -20,6 +20,11 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    nix-index-database = {
+      url = "github:nix-community/nix-index-database";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   # Cachix support
@@ -37,7 +42,7 @@
     ];
   };
 
-  outputs = {nixpkgs, ...} @ inputs: let
+  outputs = {nixpkgs, nix-index-database, ...} @ inputs: let
     system = "x86_64-linux";
   in {
     nixosConfigurations = {
@@ -46,6 +51,11 @@
         modules = [
           ./hosts/thickpad/configuration.nix
           ./modules/nixos/modules.nix
+
+          # add nix-index-database
+          nix-index-database.nixosModules.default
+          # also wrap and install comma
+          { programs.nix-index-database.comma.enable = true; }
         ];
       };
       server = nixpkgs.lib.nixosSystem {
