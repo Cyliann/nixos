@@ -28,4 +28,19 @@
       extraGroups = ["libvirtd"];
     };
   };
+
+  # Bridge interface
+  networking.defaultGateway = "10.54.54.1";
+  networking.bridges.br0.interfaces = ["enp1s0"];
+  networking.interfaces.br0 = {
+    useDHCP = false;
+    ipv4.addresses = [{
+      "address" = "10.54.54.6";
+      "prefixLength" = 24;
+    }];
+  };
+  # Enable spice port
+  networking.firewall.allowedTCPPorts = [
+  5900
+];
 }
