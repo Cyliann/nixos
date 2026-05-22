@@ -65,6 +65,7 @@
   networking.firewall.allowedTCPPorts = [
     22
     80
+    443
   ];
 
   programs.nix-ld = {
@@ -74,6 +75,14 @@
       zlib
     ];
   };
+
+  environment.systemPackages = with pkgs; [
+      # Nix LSP dependencies
+      nixd
+      alejandra
+      deadnix
+      statix
+  ];
 
   nix.gc = {
     automatic = true;

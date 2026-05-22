@@ -58,12 +58,6 @@
       # Lua LSP
       lua-language-server
 
-      # Nix LSP dependencies
-      nixd
-      alejandra
-      deadnix
-      statix
-
       # Typst
       tinymist
 
