@@ -39,6 +39,8 @@
       protonvpn-gui
       imv
       localsend
+      zotero
+      typst
 
       # Camera
       darktable
