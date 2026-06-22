@@ -28,7 +28,7 @@
       telegram-desktop
       zapzap # whatsapp
       anki-bin
-      libreoffice
+      onlyoffice-desktopeditors
       zathura
       pavucontrol
       hyprshot
