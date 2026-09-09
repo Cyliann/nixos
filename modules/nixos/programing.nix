@@ -27,28 +27,8 @@
       # Python
       (python3.withPackages (ps:
         with ps; [
-          requests
-          typing-extensions
-          pytest
           yt-dlp
           ytmusicapi
-
-          # for jupyter and DS
-          jupyter
-          ipython
-          jupytext
-
-          # for molten.nvim
-          jupyter-client
-          pynvim
-
-          numpy
-          pandas
-          matplotlib
-          scikit-learn
-          seaborn
-          statsmodels
-          uv
         ]))
       basedpyright
       ruff
@@ -69,6 +49,7 @@
       # Quality of life
       gh
       just
+      devenv
 
       #Julia
       julia-bin
