@@ -59,6 +59,8 @@
       gimp
       slack
       picard
+
+      rustdesk
     ];
 
     nixpkgs.overlays = [
@@ -107,8 +109,10 @@
 
     networking.firewall = {
       enable = false;
-      # Localsend support
-      allowedTCPPorts = [ 53317 ];
+      allowedTCPPorts = [ 
+        53317 # Localsend
+        21118 # rustdesk
+      ];
       allowedUDPPorts = [ 53317 ];
     };
 
