@@ -36,7 +36,7 @@
       inputs.zen-browser.packages."${system}".default
       rmpc
       syncthing
-      protonvpn-gui
+      proton-vpn
       imv
       localsend
       zotero

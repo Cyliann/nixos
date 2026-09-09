@@ -9,10 +9,6 @@
   config = lib.mkIf config.modules.gtk.enable {
     gtk = {
       enable = true;
-      theme = {
-        name = "Materia-dark-compact";
-        package = pkgs.materia-theme;
-      };
       iconTheme = {
         name = "Vimix-white-dark";
         package = pkgs.vimix-icon-theme;
@@ -25,6 +21,7 @@
     };
 
     home.pointerCursor = {
+      enable = true;
       name = "BreezeX-RosePineDawn-Linux";
       package = pkgs.rose-pine-cursor;
       size = 28;
