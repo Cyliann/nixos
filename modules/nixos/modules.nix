@@ -8,6 +8,5 @@
     ./rice.nix
     ./latex.nix
     ./battery.nix
-    ./home-assistant.nix
   ];
 }

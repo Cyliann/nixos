@@ -53,10 +53,10 @@
           { programs.nix-index-database.comma.enable = true; }
         ];
       };
-      server = nixpkgs.lib.nixosSystem {
+      homelab = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit system inputs;};
         modules = [
-          ./hosts/server/configuration.nix
+          ./hosts/homelab/configuration.nix
           ./modules/nixos/modules.nix
         ];
       };

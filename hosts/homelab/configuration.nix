@@ -9,9 +9,8 @@
 
   terminal.enable = true;
   utils.enable = true;
-  home-assistant.enable = true;
 
-  networking.hostName = "server";
+  networking.hostName = "homelab";
 
   virtualisation.docker.enable = true;
 
