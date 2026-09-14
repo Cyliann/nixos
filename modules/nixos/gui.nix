@@ -33,7 +33,7 @@
       pavucontrol
       hyprshot
       mpd
-      inputs.zen-browser.packages."${system}".default
+      inputs.zen-browser.packages."${stdenv.hostPlatform.system}".default
       rmpc
       syncthing
       proton-vpn
