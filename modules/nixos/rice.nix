@@ -25,7 +25,7 @@
       matugen
       stow
       wlogout
-      inputs.noctalia.packages.${system}.default
+      noctalia
     ];
 
     fonts.packages = with pkgs; [
