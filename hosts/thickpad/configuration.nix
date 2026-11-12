@@ -21,11 +21,6 @@
 
   boot = {
     consoleLogLevel = 0;
-    initrd = {
-      systemd.enable = true;
-      verbose = false;
-    };
-
     kernelParams = ["quiet" "splash" "rd.systemd.show_status=false" "rd.udev.log_level=3" "udev.log_priority=3" "boot.shell_on_fail"];
     extraModulePackages = with config.boot.kernelPackages; [perf];
     plymouth = rec {
@@ -35,6 +30,7 @@
     };
 
     loader = {
+      systemd-boot.enable = true;
       timeout = 0;
     };
   };
@@ -63,15 +59,6 @@
       }
     ];
     allowedTCPPorts = [8096];
-  };
-
- services.avahi = {
-    enable = true;
-    nssmdns4 = true;
-    publish = {
-      enable = true;
-      addresses = true;
-    };
   };
 
   virtualisation.docker = {

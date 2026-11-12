@@ -12,7 +12,7 @@
 
   config = lib.mkIf config.gui.enable {
     nixpkgs.config.permittedInsecurePackages = [
-      "electron-38.8.4"
+      "firefox-esr-140-bin-unwrapped-140.17.0esr"
     ];
 
     environment.systemPackages = with pkgs; [
@@ -31,7 +31,6 @@
       onlyoffice-desktopeditors
       zathura
       pavucontrol
-      hyprshot
       mpd
       inputs.zen-browser.packages."${stdenv.hostPlatform.system}".default
       rmpc
@@ -63,21 +62,8 @@
       rustdesk
     ];
 
-    nixpkgs.overlays = [
-      (final: prev: {
-        brave = prev.brave.override {
-          commandLineArgs = "--enable-features=TouchpadOverscrollHistoryNavigation";
-        };
-      })
-    ];
-
     programs = {
-      hyprland = {
-        enable = true;
-        xwayland.enable = true;
-      };
-      hyprlock.enable = true;
-      waybar.enable = true;
+      niri.enable = true;
       dconf.enable = true; # needed for wpgtk
     };
 
@@ -143,12 +129,12 @@
       # Enable touchpad support (enabled default in most desktopManager).
       libinput.enable = true;
 
-      # Star hyprland automatically
+      # Star niri automatically
       greetd = {
         enable = true;
         settings = rec {
           initial_session = {
-            command = "${pkgs.hyprland}/bin/start-hyprland";
+            comman = "${pkgs.niri}/bin/niri-session";
             user = "cylian";
           };
           default_session = initial_session;
