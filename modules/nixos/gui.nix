@@ -19,6 +19,7 @@
       kitty
       neovide
       swaynotificationcenter
+      xwayland-satellite
       nwg-displays
       libnotify # dunst depends on this
       legcord
@@ -134,7 +135,7 @@
         enable = true;
         settings = rec {
           initial_session = {
-            comman = "${pkgs.niri}/bin/niri-session";
+            command = "${pkgs.niri}/bin/niri-session";
             user = "cylian";
           };
           default_session = initial_session;
