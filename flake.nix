@@ -20,6 +20,11 @@
       url = "github:nix-community/nix-index-database";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    niri-scratchpad = {
+      url = "github:argosnothing/niri-scratchpad-rs";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   # Cachix support

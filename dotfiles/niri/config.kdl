@@ -273,6 +273,15 @@ spawn-at-startup "noctalia"
 spawn-at-startup "mpDris2"
 spawn-at-startup "easyeffects --gapplication-service"
 
+
+// Named workspaces
+workspace "terminal"
+workspace "browser"
+workspace "chat"
+workspace "files"
+workspace "nvim"
+workspace "stash" {}
+
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
 // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
 
@@ -361,6 +370,7 @@ binds {
     Mod+S hotkey-overlay-title="Display power menu" { spawn-sh "noctalia msg panel-toggle session"; }
     Mod+Shift+L hotkey-overlay-title="Lock the Screen: noctalia" { spawn-sh "noctalia msg session lock"; }
     Mod+Shift+S hotkey-overlay-title="Suspend" { spawn-sh "noctalia msg session lock-and-suspend"; }
+    Mod+W hotkey-overlay-title="Random wallpaper" { spawn-sh "noctalia msg wallpaper-random"; }
 
     // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument. It's passed verbatim to `sh -c`.
@@ -400,7 +410,10 @@ binds {
     Mod+Down  { focus-window-or-workspace-down; }
     Mod+Up    { focus-window-or-workspace-up; }
     Mod+Right { focus-column-right; }
-    Mod+J     { focus-window-previous; }
+    Mod+H  { focus-column-left; }
+    Mod+J  { focus-window-or-workspace-down; }
+    Mod+K    { focus-window-or-workspace-up; }
+    Mod+L { focus-column-right; }
 
     Mod+Shift+Left  { move-column-left; }
     Mod+Shift+Down  { move-window-to-workspace-down; }
@@ -482,24 +495,28 @@ binds {
     //
     // For example, with 2 workspaces + 1 empty, indices 3, 4, 5 and so on
     // will all refer to the 3rd workspace.
-    Mod+1 { focus-workspace 1; }
-    Mod+2 { focus-workspace 2; }
-    Mod+3 { focus-workspace 3; }
-    Mod+4 { focus-workspace 4; }
-    Mod+5 { focus-workspace 5; }
+    Mod+1 { focus-workspace "terminal"; }
+    Mod+2 { focus-workspace "browser"; }
+    Mod+3 { focus-workspace "chat"; }
+    Mod+4 { focus-workspace "files"; }
+    Mod+5 { focus-workspace "nvim"; }
     Mod+6 { focus-workspace 6; }
     Mod+7 { focus-workspace 7; }
     Mod+8 { focus-workspace 8; }
     Mod+9 { focus-workspace 9; }
-    Mod+Shift+1 { move-column-to-workspace 1; }
-    Mod+Shift+2 { move-column-to-workspace 2; }
-    Mod+Shift+3 { move-column-to-workspace 3; }
-    Mod+Shift+4 { move-column-to-workspace 4; }
-    Mod+Shift+5 { move-column-to-workspace 5; }
+    Mod+Shift+1 { move-column-to-workspace "terminal"; }
+    Mod+Shift+2 { move-column-to-workspace "browser"; }
+    Mod+Shift+3 { move-column-to-workspace "chat"; }
+    Mod+Shift+4 { move-column-to-workspace "files"; }
+    Mod+Shift+5 { move-column-to-workspace "nvim"; }
     Mod+Shift+6 { move-column-to-workspace 6; }
     Mod+Shift+7 { move-column-to-workspace 7; }
     Mod+Shift+8 { move-column-to-workspace 8; }
     Mod+Shift+9 { move-column-to-workspace 9; }
+
+    Mod+T { 
+        spawn "niri-scratchpad" "target" "--spawn" "Telegram" "appid" "org.telegram.desktop" ;
+    }
 
     // Alternatively, there are commands to move just a single window:
     // Mod+Ctrl+1 { move-window-to-workspace 1; }
@@ -566,7 +583,7 @@ binds {
     // Toggle tabbed column display mode.
     // Windows in this column will appear as vertical tabs,
     // rather than stacked on top of each other.
-    Mod+W { toggle-column-tabbed-display; }
+    // Mod+W { toggle-column-tabbed-display; }
 
     // Actions to switch layouts.
     // Note: if you uncomment these, make sure you do NOT have
@@ -598,3 +615,5 @@ binds {
     // moving the mouse or pressing any other key.
     Mod+Shift+P { power-off-monitors; }
 }
+
+include "noctalia.kdl"

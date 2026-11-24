@@ -34,6 +34,7 @@
       pavucontrol
       mpd
       inputs.zen-browser.packages."${stdenv.hostPlatform.system}".default
+      inputs.niri-scratchpad.packages."${stdenv.hostPlatform.system}".default
       rmpc
       syncthing
       proton-vpn
