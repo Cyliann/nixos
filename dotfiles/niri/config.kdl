@@ -45,7 +45,7 @@ input {
 
     mouse {
         // off
-        natural-scroll
+        // natural-scroll
         // accel-speed 0.2
         // accel-profile "flat"
         // scroll-method "no-scroll"
@@ -614,6 +614,14 @@ binds {
     // Powers off the monitors. To turn them back on, do any input like
     // moving the mouse or pressing any other key.
     Mod+Shift+P { power-off-monitors; }
+}
+
+cursor {
+    xcursor-theme "Vimix-white-cursors"
+    xcursor-size 28
+
+    hide-when-typing
+    hide-after-inactive-ms 1000
 }
 
 include "noctalia.kdl"
